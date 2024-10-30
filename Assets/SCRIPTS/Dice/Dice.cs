@@ -1,20 +1,45 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
-    public Sprite[] diceSides; // Assurez-vous que les sprites sont attribués dans l'inspecteur
-    private Image diceImage;
+    [Header("References"), Space(5)]
+    public Dice[] dices;
+    public Sprite[] diceSides; // Assurez-vous que les sprites sont attribuï¿½s dans l'inspecteur
+    [SerializeField] private SpriteRenderer diceImage;
+    public GameController gameController;
 
+    [Header("Variables"), Space(5)] 
+    public int randomSide;
+    public int score;
+    
     void Start()
     {
-        diceImage = GetComponent<Image>();
-        RollDice(); // Pour initialiser avec une face de dé visible
+        diceImage = GetComponent<SpriteRenderer>();
+        
+        diceImage.sprite = diceSides[5];
     }
 
-    public void RollDice()
+    private void OnMouseDown()
     {
-        int randomSide = Random.Range(0, diceSides.Length);
-        diceImage.sprite = diceSides[randomSide];
+        RollAllDices();
+    }
+
+    private void RollDice()
+    {
+        randomSide = Random.Range(1, 7); // parametre de Range (en interval) -> [min, max[
+        score = randomSide;
+        diceImage.sprite = diceSides[randomSide -1];
+    }
+    
+    private void RollAllDices()
+    {
+        foreach (var dice in dices)
+        {
+            RollDice();
+        }
+        gameController.CalculateScore();
     }
 }

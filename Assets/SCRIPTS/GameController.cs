@@ -3,9 +3,12 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public Dice[] dices;
+    [Header("References"), Space(5)]
     public Text scoreText;
-    private int playerScore;
+    public Dice dice;
+    
+    [Header("Variables"), Space(5)]
+    [SerializeField] private int playerScore;
 
     void Start()
     {
@@ -13,20 +16,10 @@ public class GameController : MonoBehaviour
         UpdateScore();
     }
 
-    public void RollAllDices()
+    public void CalculateScore()
     {
-        foreach (Dice dice in dices)
-        {
-            dice.RollDice();
-        }
-        CalculateScore();
-    }
-
-    private void CalculateScore()
-    {
-        // Ajoute ici la logique pour calculer le score basé sur les dés lancés
-        // Pour l'instant, on va juste incrémenter le score de façon arbitraire pour tester
-        playerScore += Random.Range(1, 7);
+        playerScore += dice.score;
+        //Debug.Log(dice.score);
         UpdateScore();
     }
 

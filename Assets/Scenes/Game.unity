@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -210,7 +209,6 @@ GameObject:
   m_Component:
   - component: {fileID: 393776339}
   - component: {fileID: 393776338}
-  - component: {fileID: 393776337}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -218,19 +216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &393776337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393776336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3a725c47062ea4ea4a71214d3ddad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameController: {fileID: 393776338}
 --- !u!114 &393776338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,9 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70895e07adf9ad9419917c18afc784d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dices:
-  - {fileID: 423872960}
   scoreText: {fileID: 1486812874}
+  dice: {fileID: 423872960}
+  playerScore: 0
 --- !u!4 &393776339
 Transform:
   m_ObjectHideFlags: 0
@@ -271,11 +256,10 @@ GameObject:
   m_Component:
   - component: {fileID: 423872964}
   - component: {fileID: 423872963}
-  - component: {fileID: 423872962}
-  - component: {fileID: 423872961}
+  - component: {fileID: 423872965}
   - component: {fileID: 423872960}
   m_Layer: 0
-  m_Name: Square
+  m_Name: 1ere Chouette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d088c6a03a0a743ab620cee4a78a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dices:
+  - {fileID: 423872960}
   diceSides:
   - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
   - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
@@ -300,44 +286,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
   - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
   - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
---- !u!114 &423872961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423872959}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 45b37d38488ae044c827b3c5bb1d7333, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 1
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &423872962
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423872959}
-  m_CullTransparentMesh: 1
+  diceImage: {fileID: 423872963}
+  gameController: {fileID: 393776338}
+  randomSide: 0
+  score: 0
 --- !u!212 &423872963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -379,7 +331,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45b37d38488ae044c827b3c5bb1d7333, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -406,9 +358,54 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.043169886, y: -1.2627254}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1346, y: 711}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &423872965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423872959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.43, y: 1.42}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 393776337}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RollButton, Assembly-CSharp
         m_MethodName: OnRollButtonClicked
         m_Mode: 1
