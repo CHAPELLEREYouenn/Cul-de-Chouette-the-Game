@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour
 {
     [Header("References"), Space(5)]
     public Text scoreText;
-    public Dice dice;
+    //public Dice dice;
     
     [Header("Variables"), Space(5)]
     [SerializeField] private int playerScore;
@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
 
     public void CalculateScore()
     {
-        playerScore += dice.score;
+        //playerScore += dice.score;
         //Debug.Log(dice.score);
         UpdateScore();
     }
