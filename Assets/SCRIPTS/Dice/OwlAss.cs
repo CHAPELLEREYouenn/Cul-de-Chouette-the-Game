@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class OwlAss : MonoBehaviour
@@ -21,7 +19,7 @@ public class OwlAss : MonoBehaviour
     {
         if (owlAssInstance != null)
         {
-            Debug.LogWarning("Il y a déjà une instance de PlayerMovement dans la scène");
+            Debug.LogWarning("Il y a déjà une instance de OwlAss dans la scène");
             return;
         }
 

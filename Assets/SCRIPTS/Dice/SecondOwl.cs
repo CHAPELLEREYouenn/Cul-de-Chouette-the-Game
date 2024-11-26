@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SecondOwl : MonoBehaviour
@@ -21,7 +19,7 @@ public class SecondOwl : MonoBehaviour
     {
         if (secondOwlInstance != null)
         {
-            Debug.LogWarning("Il y a déjà une instance de PlayerMovement dans la scène");
+            Debug.LogWarning("Il y a déjà une instance de SecondOwl dans la scène");
             return;
         }
 

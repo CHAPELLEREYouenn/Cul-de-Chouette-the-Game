@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class RollingDice : MonoBehaviour
@@ -19,7 +16,7 @@ public class RollingDice : MonoBehaviour
     {
         foreach (var dice in dicesArray)
         {
-            //dice.RollDice();
+            
         }
         gameControllerScript.CalculateScore();
     }

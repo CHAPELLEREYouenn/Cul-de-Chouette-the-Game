@@ -199,6 +199,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79035752}
   m_CullTransparentMesh: 1
+--- !u!1 &134524817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134524818}
+  - component: {fileID: 134524819}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134524818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134524817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &134524819
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134524817}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9efdd9fb50b8e7b40b602946a7161574, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &393776336
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423872964}
   - component: {fileID: 423872963}
-  - component: {fileID: 423872960}
+  - component: {fileID: 423872965}
   m_Layer: 0
   m_Name: 1ere Chouette
   m_TagString: Untagged
@@ -263,29 +391,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &423872960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423872959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d088c6a03a0a743ab620cee4a78a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceSides:
-  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
-  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
-  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
-  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
-  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
-  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
-  diceImage: {fileID: 423872963}
-  gameController: {fileID: 393776338}
-  randomSide: 0
-  score: 0
 --- !u!212 &423872963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,6 +462,29 @@ RectTransform:
   m_AnchoredPosition: {x: -0.3076924, y: 0}
   m_SizeDelta: {x: 1346, y: 711}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &423872965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423872959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d088c6a03a0a743ab620cee4a78a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSides:
+  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
+  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
+  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
+  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
+  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
+  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
+  diceImage: {fileID: 423872963}
+  gameController: {fileID: 393776338}
+  randomSide: 0
+  score: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,10 +571,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 134524818}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &577120001
@@ -560,9 +689,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 605335776}
-  - component: {fileID: 605335775}
   - component: {fileID: 605335774}
   - component: {fileID: 605335773}
+  - component: {fileID: 605335775}
   m_Layer: 0
   m_Name: Dices
   m_TagString: Untagged
@@ -845,7 +974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721131872}
   - component: {fileID: 721131874}
-  - component: {fileID: 721131873}
+  - component: {fileID: 721131875}
   m_Layer: 0
   m_Name: 2eme Chouette
   m_TagString: Untagged
@@ -872,29 +1001,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1346, y: 711}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &721131873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721131871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d088c6a03a0a743ab620cee4a78a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceSides:
-  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
-  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
-  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
-  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
-  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
-  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
-  diceImage: {fileID: 721131874}
-  gameController: {fileID: 393776338}
-  randomSide: 0
-  score: 0
 --- !u!212 &721131874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -947,6 +1053,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &721131875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721131871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afcfa8777ba982429637ecd9d8e08f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSides:
+  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
+  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
+  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
+  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
+  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
+  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
+  diceImage: {fileID: 721131874}
+  gameController: {fileID: 393776338}
+  randomSide: 0
+  score: 0
 --- !u!1 &1486812872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846474249}
   - component: {fileID: 1846474251}
-  - component: {fileID: 1846474250}
+  - component: {fileID: 1846474252}
   m_Layer: 0
   m_Name: Cul de Chouette
   m_TagString: Untagged
@@ -1197,29 +1326,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.3076924, y: 0}
   m_SizeDelta: {x: 1346, y: 711}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1846474250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846474248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d088c6a03a0a743ab620cee4a78a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceSides:
-  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
-  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
-  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
-  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
-  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
-  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
-  diceImage: {fileID: 1846474251}
-  gameController: {fileID: 393776338}
-  randomSide: 0
-  score: 0
 --- !u!212 &1846474251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1272,6 +1378,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1846474252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846474248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91592bfe00b96ad44930498f14da6ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSides:
+  - {fileID: 21300000, guid: 189f75bbb56da154c9c4ab2c173db41a, type: 3}
+  - {fileID: 21300000, guid: 3660194024a04744c8920b5b2329875b, type: 3}
+  - {fileID: 21300000, guid: 350c20c534d54474f9f7b207039e6c32, type: 3}
+  - {fileID: 21300000, guid: 97abe57f5430015409211421eb9e3634, type: 3}
+  - {fileID: 21300000, guid: 23d185a00fbe74c4c886fbff855be501, type: 3}
+  - {fileID: 21300000, guid: f53f957090e00cf41a191424dded5ad4, type: 3}
+  diceImage: {fileID: 1846474251}
+  gameController: {fileID: 393776338}
+  randomSide: 0
+  score: 0
 --- !u!1 &1969937460
 GameObject:
   m_ObjectHideFlags: 0
